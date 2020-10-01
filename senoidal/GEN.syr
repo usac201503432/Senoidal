@@ -1,0 +1,387 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.26 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.28 secs
+ 
+--> Reading design: GEN.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "GEN.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "GEN"
+Output Format                      : NGC
+Target Device                      : xc3s50a-5-tq144
+
+---- Source Options
+Top Module Name                    : GEN
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Cursos/Electronica _3/Lab_E3_ISE_2019/senoidal/GEN.vhd" in Library work.
+Architecture behavioral of Entity gen is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <GEN> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <GEN> in library <work> (Architecture <behavioral>).
+Entity <GEN> analyzed. Unit <GEN> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <GEN>.
+    Related source file is "D:/Cursos/Electronica _3/Lab_E3_ISE_2019/senoidal/GEN.vhd".
+    Found 32x8-bit ROM for signal <seno$mux0000>.
+    Found 31-bit up counter for signal <contador>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+Unit <GEN> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 32x8-bit ROM                                          : 1
+# Counters                                             : 1
+ 31-bit up counter                                     : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 32x8-bit ROM                                          : 1
+# Counters                                             : 1
+ 31-bit up counter                                     : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <GEN> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block GEN, actual ratio is 8.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 31
+ Flip-Flops                                            : 31
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : GEN.ngr
+Top Level Output File Name         : GEN
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 177
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 30
+#      LUT2                        : 9
+#      LUT3                        : 6
+#      LUT3_D                      : 1
+#      LUT4                        : 55
+#      LUT4_D                      : 1
+#      MUXCY                       : 37
+#      MUXF5                       : 4
+#      VCC                         : 1
+#      XORCY                       : 31
+# FlipFlops/Latches                : 31
+#      FDC                         : 31
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 1
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50atq144-5 
+
+ Number of Slices:                       56  out of    704     7%  
+ Number of Slice Flip Flops:             31  out of   1408     2%  
+ Number of 4 input LUTs:                103  out of   1408     7%  
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    108     9%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 31    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 31    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 6.280ns (Maximum Frequency: 159.243MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 11.036ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.280ns (frequency: 159.243MHz)
+  Total number of paths / destination ports: 1457 / 31
+-------------------------------------------------------------------------
+Delay:               6.280ns (Levels of Logic = 32)
+  Source:            contador_1 (FF)
+  Destination:       contador_30 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: contador_1 to contador_30
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             20   0.495   1.045  contador_1 (contador_1)
+     LUT1:I0->O            1   0.561   0.000  Mcount_contador_cy<1>_rt (Mcount_contador_cy<1>_rt)
+     MUXCY:S->O            1   0.523   0.000  Mcount_contador_cy<1> (Mcount_contador_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<2> (Mcount_contador_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<3> (Mcount_contador_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<4> (Mcount_contador_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<5> (Mcount_contador_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<6> (Mcount_contador_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<7> (Mcount_contador_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<8> (Mcount_contador_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<9> (Mcount_contador_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<10> (Mcount_contador_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<11> (Mcount_contador_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<12> (Mcount_contador_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<13> (Mcount_contador_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<14> (Mcount_contador_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<15> (Mcount_contador_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<16> (Mcount_contador_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<17> (Mcount_contador_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<18> (Mcount_contador_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<19> (Mcount_contador_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<20> (Mcount_contador_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<21> (Mcount_contador_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<22> (Mcount_contador_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<23> (Mcount_contador_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<24> (Mcount_contador_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<25> (Mcount_contador_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<26> (Mcount_contador_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<27> (Mcount_contador_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_contador_cy<28> (Mcount_contador_cy<28>)
+     MUXCY:CI->O           0   0.065   0.000  Mcount_contador_cy<29> (Mcount_contador_cy<29>)
+     XORCY:CI->O           1   0.654   0.423  Mcount_contador_xor<30> (Result<30>)
+     LUT2:I1->O            1   0.562   0.000  Mcount_contador_eqn_301 (Mcount_contador_eqn_30)
+     FDC:D                     0.197          contador_30
+    ----------------------------------------
+    Total                      6.280ns (4.812ns logic, 1.468ns route)
+                                       (76.6% logic, 23.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 494 / 8
+-------------------------------------------------------------------------
+Offset:              11.036ns (Levels of Logic = 12)
+  Source:            contador_24 (FF)
+  Destination:       seno<4> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: contador_24 to seno<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.495   0.488  contador_24 (contador_24)
+     LUT2:I0->O            1   0.561   0.000  contador_cmp_eq00001_wg_lut<0> (contador_cmp_eq00001_wg_lut<0>)
+     MUXCY:S->O            1   0.523   0.000  contador_cmp_eq00001_wg_cy<0> (contador_cmp_eq00001_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  contador_cmp_eq00001_wg_cy<1> (contador_cmp_eq00001_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  contador_cmp_eq00001_wg_cy<2> (contador_cmp_eq00001_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  contador_cmp_eq00001_wg_cy<3> (contador_cmp_eq00001_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  contador_cmp_eq00001_wg_cy<4> (contador_cmp_eq00001_wg_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  contador_cmp_eq00001_wg_cy<5> (contador_cmp_eq00001_wg_cy<5>)
+     MUXCY:CI->O          37   0.179   1.182  contador_cmp_eq00001_wg_cy<6> (contador_cmp_eq00001_wg_cy<6>)
+     LUT2:I0->O            2   0.561   0.488  seno<3>65 (N10)
+     LUT4:I0->O            1   0.561   0.359  seno<4>74_SW0 (N35)
+     LUT4:I3->O            1   0.561   0.357  seno<4>74 (seno_4_OBUF)
+     OBUF:I->O                 4.396          seno_4_OBUF (seno<4>)
+    ----------------------------------------
+    Total                     11.036ns (8.162ns logic, 2.874ns route)
+                                       (74.0% logic, 26.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.18 secs
+ 
+--> 
+
+Total memory usage is 4549832 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

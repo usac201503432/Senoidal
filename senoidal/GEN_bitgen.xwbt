@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Cursos\Electronica _3\Lab_E3_ISE_2019\senoidal\GEN.ncd
+OUTFILE=D:\Cursos\Electronica _3\Lab_E3_ISE_2019\senoidal\GEN.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s50a-5tq144
+WORKINGDIR=D:\Cursos\Electronica _3\Lab_E3_ISE_2019\senoidal
+LICENSE=WebPack
+USER_INFO=211482174_0_0_930

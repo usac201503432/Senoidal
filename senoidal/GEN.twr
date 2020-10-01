@@ -1,0 +1,703 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml GEN.twx GEN.ncd -o GEN.twr GEN.pcf -ucf elbertv2.ucf
+
+Design file:              GEN.ncd
+Physical constraint file: GEN.pcf
+Device,package,speed:     xc3s50a,tq144,-5 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1457 paths analyzed, 124 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.667ns.
+--------------------------------------------------------------------------------
+
+Paths for end point contador_30 (SLICE_X4Y24.F1), 31 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     77.666ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               contador_1 (FF)
+  Destination:          contador_30 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.625ns (Levels of Logic = 17)
+  Clock Path Skew:      -0.042ns (0.227 - 0.269)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: contador_1 to contador_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y16.XQ       Tcko                  0.521   contador<1>
+                                                       contador_1
+    SLICE_X7Y16.G1       net (fanout=20)       0.567   contador<1>
+    SLICE_X7Y16.COUT     Topcyg                1.009   Result<0>
+                                                       contador<1>_rt
+                                                       Mcount_contador_cy<1>
+    SLICE_X7Y17.CIN      net (fanout=1)        0.000   Mcount_contador_cy<1>
+    SLICE_X7Y17.COUT     Tbyp                  0.130   Result<2>
+                                                       Mcount_contador_cy<2>
+                                                       Mcount_contador_cy<3>
+    SLICE_X7Y18.CIN      net (fanout=1)        0.000   Mcount_contador_cy<3>
+    SLICE_X7Y18.COUT     Tbyp                  0.130   Result<4>
+                                                       Mcount_contador_cy<4>
+                                                       Mcount_contador_cy<5>
+    SLICE_X7Y19.CIN      net (fanout=1)        0.000   Mcount_contador_cy<5>
+    SLICE_X7Y19.COUT     Tbyp                  0.130   Result<6>
+                                                       Mcount_contador_cy<6>
+                                                       Mcount_contador_cy<7>
+    SLICE_X7Y20.CIN      net (fanout=1)        0.000   Mcount_contador_cy<7>
+    SLICE_X7Y20.COUT     Tbyp                  0.130   Result<8>
+                                                       Mcount_contador_cy<8>
+                                                       Mcount_contador_cy<9>
+    SLICE_X7Y21.CIN      net (fanout=1)        0.000   Mcount_contador_cy<9>
+    SLICE_X7Y21.COUT     Tbyp                  0.130   Result<10>
+                                                       Mcount_contador_cy<10>
+                                                       Mcount_contador_cy<11>
+    SLICE_X7Y22.CIN      net (fanout=1)        0.000   Mcount_contador_cy<11>
+    SLICE_X7Y22.COUT     Tbyp                  0.130   Result<12>
+                                                       Mcount_contador_cy<12>
+                                                       Mcount_contador_cy<13>
+    SLICE_X7Y23.CIN      net (fanout=1)        0.000   Mcount_contador_cy<13>
+    SLICE_X7Y23.COUT     Tbyp                  0.130   Result<14>
+                                                       Mcount_contador_cy<14>
+                                                       Mcount_contador_cy<15>
+    SLICE_X7Y24.CIN      net (fanout=1)        0.000   Mcount_contador_cy<15>
+    SLICE_X7Y24.COUT     Tbyp                  0.130   Result<16>
+                                                       Mcount_contador_cy<16>
+                                                       Mcount_contador_cy<17>
+    SLICE_X7Y25.CIN      net (fanout=1)        0.000   Mcount_contador_cy<17>
+    SLICE_X7Y25.COUT     Tbyp                  0.130   Result<18>
+                                                       Mcount_contador_cy<18>
+                                                       Mcount_contador_cy<19>
+    SLICE_X7Y26.CIN      net (fanout=1)        0.000   Mcount_contador_cy<19>
+    SLICE_X7Y26.COUT     Tbyp                  0.130   Result<20>
+                                                       Mcount_contador_cy<20>
+                                                       Mcount_contador_cy<21>
+    SLICE_X7Y27.CIN      net (fanout=1)        0.000   Mcount_contador_cy<21>
+    SLICE_X7Y27.COUT     Tbyp                  0.130   Result<22>
+                                                       Mcount_contador_cy<22>
+                                                       Mcount_contador_cy<23>
+    SLICE_X7Y28.CIN      net (fanout=1)        0.000   Mcount_contador_cy<23>
+    SLICE_X7Y28.COUT     Tbyp                  0.130   Result<24>
+                                                       Mcount_contador_cy<24>
+                                                       Mcount_contador_cy<25>
+    SLICE_X7Y29.CIN      net (fanout=1)        0.000   Mcount_contador_cy<25>
+    SLICE_X7Y29.COUT     Tbyp                  0.130   Result<26>
+                                                       Mcount_contador_cy<26>
+                                                       Mcount_contador_cy<27>
+    SLICE_X7Y30.CIN      net (fanout=1)        0.000   Mcount_contador_cy<27>
+    SLICE_X7Y30.COUT     Tbyp                  0.130   Result<28>
+                                                       Mcount_contador_cy<28>
+                                                       Mcount_contador_cy<29>
+    SLICE_X7Y31.CIN      net (fanout=1)        0.000   Mcount_contador_cy<29>
+    SLICE_X7Y31.X        Tcinx                 0.489   Result<30>
+                                                       Mcount_contador_xor<30>
+    SLICE_X4Y24.F1       net (fanout=1)        0.563   Result<30>
+    SLICE_X4Y24.CLK      Tfck                  0.656   contador<30>
+                                                       Mcount_contador_eqn_301
+                                                       contador_30
+    -------------------------------------------------  ---------------------------
+    Total                                      5.625ns (4.495ns logic, 1.130ns route)
+                                                       (79.9% logic, 20.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.723ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               contador_0 (FF)
+  Destination:          contador_30 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.568ns (Levels of Logic = 17)
+  Clock Path Skew:      -0.042ns (0.227 - 0.269)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: contador_0 to contador_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y16.YQ       Tcko                  0.596   contador<1>
+                                                       contador_0
+    SLICE_X7Y16.F2       net (fanout=21)       0.418   contador<0>
+    SLICE_X7Y16.COUT     Topcyf                1.026   Result<0>
+                                                       Mcount_contador_lut<0>_INV_0
+                                                       Mcount_contador_cy<0>
+                                                       Mcount_contador_cy<1>
+    SLICE_X7Y17.CIN      net (fanout=1)        0.000   Mcount_contador_cy<1>
+    SLICE_X7Y17.COUT     Tbyp                  0.130   Result<2>
+                                                       Mcount_contador_cy<2>
+                                                       Mcount_contador_cy<3>
+    SLICE_X7Y18.CIN      net (fanout=1)        0.000   Mcount_contador_cy<3>
+    SLICE_X7Y18.COUT     Tbyp                  0.130   Result<4>
+                                                       Mcount_contador_cy<4>
+                                                       Mcount_contador_cy<5>
+    SLICE_X7Y19.CIN      net (fanout=1)        0.000   Mcount_contador_cy<5>
+    SLICE_X7Y19.COUT     Tbyp                  0.130   Result<6>
+                                                       Mcount_contador_cy<6>
+                                                       Mcount_contador_cy<7>
+    SLICE_X7Y20.CIN      net (fanout=1)        0.000   Mcount_contador_cy<7>
+    SLICE_X7Y20.COUT     Tbyp                  0.130   Result<8>
+                                                       Mcount_contador_cy<8>
+                                                       Mcount_contador_cy<9>
+    SLICE_X7Y21.CIN      net (fanout=1)        0.000   Mcount_contador_cy<9>
+    SLICE_X7Y21.COUT     Tbyp                  0.130   Result<10>
+                                                       Mcount_contador_cy<10>
+                                                       Mcount_contador_cy<11>
+    SLICE_X7Y22.CIN      net (fanout=1)        0.000   Mcount_contador_cy<11>
+    SLICE_X7Y22.COUT     Tbyp                  0.130   Result<12>
+                                                       Mcount_contador_cy<12>
+                                                       Mcount_contador_cy<13>
+    SLICE_X7Y23.CIN      net (fanout=1)        0.000   Mcount_contador_cy<13>
+    SLICE_X7Y23.COUT     Tbyp                  0.130   Result<14>
+                                                       Mcount_contador_cy<14>
+                                                       Mcount_contador_cy<15>
+    SLICE_X7Y24.CIN      net (fanout=1)        0.000   Mcount_contador_cy<15>
+    SLICE_X7Y24.COUT     Tbyp                  0.130   Result<16>
+                                                       Mcount_contador_cy<16>
+                                                       Mcount_contador_cy<17>
+    SLICE_X7Y25.CIN      net (fanout=1)        0.000   Mcount_contador_cy<17>
+    SLICE_X7Y25.COUT     Tbyp                  0.130   Result<18>
+                                                       Mcount_contador_cy<18>
+                                                       Mcount_contador_cy<19>
+    SLICE_X7Y26.CIN      net (fanout=1)        0.000   Mcount_contador_cy<19>
+    SLICE_X7Y26.COUT     Tbyp                  0.130   Result<20>
+                                                       Mcount_contador_cy<20>
+                                                       Mcount_contador_cy<21>
+    SLICE_X7Y27.CIN      net (fanout=1)        0.000   Mcount_contador_cy<21>
+    SLICE_X7Y27.COUT     Tbyp                  0.130   Result<22>
+                                                       Mcount_contador_cy<22>
+                                                       Mcount_contador_cy<23>
+    SLICE_X7Y28.CIN      net (fanout=1)        0.000   Mcount_contador_cy<23>
+    SLICE_X7Y28.COUT     Tbyp                  0.130   Result<24>
+                                                       Mcount_contador_cy<24>
+                                                       Mcount_contador_cy<25>
+    SLICE_X7Y29.CIN      net (fanout=1)        0.000   Mcount_contador_cy<25>
+    SLICE_X7Y29.COUT     Tbyp                  0.130   Result<26>
+                                                       Mcount_contador_cy<26>
+                                                       Mcount_contador_cy<27>
+    SLICE_X7Y30.CIN      net (fanout=1)        0.000   Mcount_contador_cy<27>
+    SLICE_X7Y30.COUT     Tbyp                  0.130   Result<28>
+                                                       Mcount_contador_cy<28>
+                                                       Mcount_contador_cy<29>
+    SLICE_X7Y31.CIN      net (fanout=1)        0.000   Mcount_contador_cy<29>
+    SLICE_X7Y31.X        Tcinx                 0.489   Result<30>
+                                                       Mcount_contador_xor<30>
+    SLICE_X4Y24.F1       net (fanout=1)        0.563   Result<30>
+    SLICE_X4Y24.CLK      Tfck                  0.656   contador<30>
+                                                       Mcount_contador_eqn_301
+                                                       contador_30
+    -------------------------------------------------  ---------------------------
+    Total                                      5.568ns (4.587ns logic, 0.981ns route)
+                                                       (82.4% logic, 17.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.778ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               contador_4 (FF)
+  Destination:          contador_30 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.499ns (Levels of Logic = 15)
+  Clock Path Skew:      -0.056ns (0.227 - 0.283)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: contador_4 to contador_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y18.YQ       Tcko                  0.596   contador<5>
+                                                       contador_4
+    SLICE_X7Y18.F3       net (fanout=47)       0.609   contador<4>
+    SLICE_X7Y18.COUT     Topcyf                1.026   Result<4>
+                                                       contador<4>_rt
+                                                       Mcount_contador_cy<4>
+                                                       Mcount_contador_cy<5>
+    SLICE_X7Y19.CIN      net (fanout=1)        0.000   Mcount_contador_cy<5>
+    SLICE_X7Y19.COUT     Tbyp                  0.130   Result<6>
+                                                       Mcount_contador_cy<6>
+                                                       Mcount_contador_cy<7>
+    SLICE_X7Y20.CIN      net (fanout=1)        0.000   Mcount_contador_cy<7>
+    SLICE_X7Y20.COUT     Tbyp                  0.130   Result<8>
+                                                       Mcount_contador_cy<8>
+                                                       Mcount_contador_cy<9>
+    SLICE_X7Y21.CIN      net (fanout=1)        0.000   Mcount_contador_cy<9>
+    SLICE_X7Y21.COUT     Tbyp                  0.130   Result<10>
+                                                       Mcount_contador_cy<10>
+                                                       Mcount_contador_cy<11>
+    SLICE_X7Y22.CIN      net (fanout=1)        0.000   Mcount_contador_cy<11>
+    SLICE_X7Y22.COUT     Tbyp                  0.130   Result<12>
+                                                       Mcount_contador_cy<12>
+                                                       Mcount_contador_cy<13>
+    SLICE_X7Y23.CIN      net (fanout=1)        0.000   Mcount_contador_cy<13>
+    SLICE_X7Y23.COUT     Tbyp                  0.130   Result<14>
+                                                       Mcount_contador_cy<14>
+                                                       Mcount_contador_cy<15>
+    SLICE_X7Y24.CIN      net (fanout=1)        0.000   Mcount_contador_cy<15>
+    SLICE_X7Y24.COUT     Tbyp                  0.130   Result<16>
+                                                       Mcount_contador_cy<16>
+                                                       Mcount_contador_cy<17>
+    SLICE_X7Y25.CIN      net (fanout=1)        0.000   Mcount_contador_cy<17>
+    SLICE_X7Y25.COUT     Tbyp                  0.130   Result<18>
+                                                       Mcount_contador_cy<18>
+                                                       Mcount_contador_cy<19>
+    SLICE_X7Y26.CIN      net (fanout=1)        0.000   Mcount_contador_cy<19>
+    SLICE_X7Y26.COUT     Tbyp                  0.130   Result<20>
+                                                       Mcount_contador_cy<20>
+                                                       Mcount_contador_cy<21>
+    SLICE_X7Y27.CIN      net (fanout=1)        0.000   Mcount_contador_cy<21>
+    SLICE_X7Y27.COUT     Tbyp                  0.130   Result<22>
+                                                       Mcount_contador_cy<22>
+                                                       Mcount_contador_cy<23>
+    SLICE_X7Y28.CIN      net (fanout=1)        0.000   Mcount_contador_cy<23>
+    SLICE_X7Y28.COUT     Tbyp                  0.130   Result<24>
+                                                       Mcount_contador_cy<24>
+                                                       Mcount_contador_cy<25>
+    SLICE_X7Y29.CIN      net (fanout=1)        0.000   Mcount_contador_cy<25>
+    SLICE_X7Y29.COUT     Tbyp                  0.130   Result<26>
+                                                       Mcount_contador_cy<26>
+                                                       Mcount_contador_cy<27>
+    SLICE_X7Y30.CIN      net (fanout=1)        0.000   Mcount_contador_cy<27>
+    SLICE_X7Y30.COUT     Tbyp                  0.130   Result<28>
+                                                       Mcount_contador_cy<28>
+                                                       Mcount_contador_cy<29>
+    SLICE_X7Y31.CIN      net (fanout=1)        0.000   Mcount_contador_cy<29>
+    SLICE_X7Y31.X        Tcinx                 0.489   Result<30>
+                                                       Mcount_contador_xor<30>
+    SLICE_X4Y24.F1       net (fanout=1)        0.563   Result<30>
+    SLICE_X4Y24.CLK      Tfck                  0.656   contador<30>
+                                                       Mcount_contador_eqn_301
+                                                       contador_30
+    -------------------------------------------------  ---------------------------
+    Total                                      5.499ns (4.327ns logic, 1.172ns route)
+                                                       (78.7% logic, 21.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point contador_3 (SLICE_X6Y17.F2), 26 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     77.692ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               contador_20 (FF)
+  Destination:          contador_3 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.567ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.074ns (0.007 - 0.081)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: contador_20 to contador_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y27.YQ       Tcko                  0.596   contador<21>
+                                                       contador_20
+    SLICE_X5Y23.F1       net (fanout=2)        0.916   contador<20>
+    SLICE_X5Y23.COUT     Topcyf                1.026   contador_cmp_eq00001_wg_cy<1>
+                                                       contador_cmp_eq00001_wg_lut<0>
+                                                       contador_cmp_eq00001_wg_cy<0>
+                                                       contador_cmp_eq00001_wg_cy<1>
+    SLICE_X5Y24.CIN      net (fanout=1)        0.000   contador_cmp_eq00001_wg_cy<1>
+    SLICE_X5Y24.COUT     Tbyp                  0.130   contador_cmp_eq00001_wg_cy<3>
+                                                       contador_cmp_eq00001_wg_cy<2>
+                                                       contador_cmp_eq00001_wg_cy<3>
+    SLICE_X5Y25.CIN      net (fanout=1)        0.000   contador_cmp_eq00001_wg_cy<3>
+    SLICE_X5Y25.COUT     Tbyp                  0.130   contador_cmp_eq00001_wg_cy<5>
+                                                       contador_cmp_eq00001_wg_cy<4>
+                                                       contador_cmp_eq00001_wg_cy<5>
+    SLICE_X5Y26.CIN      net (fanout=1)        0.000   contador_cmp_eq00001_wg_cy<5>
+    SLICE_X5Y26.XB       Tcinxb                0.216   contador_cmp_eq00001_wg_cy<6>
+                                                       contador_cmp_eq00001_wg_cy<6>
+    SLICE_X6Y17.F2       net (fanout=44)       1.897   contador_cmp_eq00001_wg_cy<6>
+    SLICE_X6Y17.CLK      Tfck                  0.656   contador<3>
+                                                       Mcount_contador_eqn_31
+                                                       contador_3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.567ns (2.754ns logic, 2.813ns route)
+                                                       (49.5% logic, 50.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.707ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               contador_26 (FF)
+  Destination:          contador_3 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.547ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.079ns (0.007 - 0.086)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: contador_26 to contador_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y28.YQ       Tcko                  0.596   contador<27>
+                                                       contador_26
+    SLICE_X5Y24.G2       net (fanout=2)        1.043   contador<26>
+    SLICE_X5Y24.COUT     Topcyg                1.009   contador_cmp_eq00001_wg_cy<3>
+                                                       contador_cmp_eq00001_wg_lut<3>
+                                                       contador_cmp_eq00001_wg_cy<3>
+    SLICE_X5Y25.CIN      net (fanout=1)        0.000   contador_cmp_eq00001_wg_cy<3>
+    SLICE_X5Y25.COUT     Tbyp                  0.130   contador_cmp_eq00001_wg_cy<5>
+                                                       contador_cmp_eq00001_wg_cy<4>
+                                                       contador_cmp_eq00001_wg_cy<5>
+    SLICE_X5Y26.CIN      net (fanout=1)        0.000   contador_cmp_eq00001_wg_cy<5>
+    SLICE_X5Y26.XB       Tcinxb                0.216   contador_cmp_eq00001_wg_cy<6>
+                                                       contador_cmp_eq00001_wg_cy<6>
+    SLICE_X6Y17.F2       net (fanout=44)       1.897   contador_cmp_eq00001_wg_cy<6>
+    SLICE_X6Y17.CLK      Tfck                  0.656   contador<3>
+                                                       Mcount_contador_eqn_31
+                                                       contador_3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.547ns (2.607ns logic, 2.940ns route)
+                                                       (47.0% logic, 53.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.796ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               contador_25 (FF)
+  Destination:          contador_3 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.458ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.079ns (0.007 - 0.086)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: contador_25 to contador_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y29.XQ       Tcko                  0.521   contador<25>
+                                                       contador_25
+    SLICE_X5Y23.G1       net (fanout=2)        0.899   contador<25>
+    SLICE_X5Y23.COUT     Topcyg                1.009   contador_cmp_eq00001_wg_cy<1>
+                                                       contador_cmp_eq00001_wg_lut<1>
+                                                       contador_cmp_eq00001_wg_cy<1>
+    SLICE_X5Y24.CIN      net (fanout=1)        0.000   contador_cmp_eq00001_wg_cy<1>
+    SLICE_X5Y24.COUT     Tbyp                  0.130   contador_cmp_eq00001_wg_cy<3>
+                                                       contador_cmp_eq00001_wg_cy<2>
+                                                       contador_cmp_eq00001_wg_cy<3>
+    SLICE_X5Y25.CIN      net (fanout=1)        0.000   contador_cmp_eq00001_wg_cy<3>
+    SLICE_X5Y25.COUT     Tbyp                  0.130   contador_cmp_eq00001_wg_cy<5>
+                                                       contador_cmp_eq00001_wg_cy<4>
+                                                       contador_cmp_eq00001_wg_cy<5>
+    SLICE_X5Y26.CIN      net (fanout=1)        0.000   contador_cmp_eq00001_wg_cy<5>
+    SLICE_X5Y26.XB       Tcinxb                0.216   contador_cmp_eq00001_wg_cy<6>
+                                                       contador_cmp_eq00001_wg_cy<6>
+    SLICE_X6Y17.F2       net (fanout=44)       1.897   contador_cmp_eq00001_wg_cy<6>
+    SLICE_X6Y17.CLK      Tfck                  0.656   contador<3>
+                                                       Mcount_contador_eqn_31
+                                                       contador_3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.458ns (2.662ns logic, 2.796ns route)
+                                                       (48.8% logic, 51.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point contador_0 (SLICE_X6Y16.G1), 26 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     77.844ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               contador_20 (FF)
+  Destination:          contador_0 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.415ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.074ns (0.007 - 0.081)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: contador_20 to contador_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y27.YQ       Tcko                  0.596   contador<21>
+                                                       contador_20
+    SLICE_X5Y23.F1       net (fanout=2)        0.916   contador<20>
+    SLICE_X5Y23.COUT     Topcyf                1.026   contador_cmp_eq00001_wg_cy<1>
+                                                       contador_cmp_eq00001_wg_lut<0>
+                                                       contador_cmp_eq00001_wg_cy<0>
+                                                       contador_cmp_eq00001_wg_cy<1>
+    SLICE_X5Y24.CIN      net (fanout=1)        0.000   contador_cmp_eq00001_wg_cy<1>
+    SLICE_X5Y24.COUT     Tbyp                  0.130   contador_cmp_eq00001_wg_cy<3>
+                                                       contador_cmp_eq00001_wg_cy<2>
+                                                       contador_cmp_eq00001_wg_cy<3>
+    SLICE_X5Y25.CIN      net (fanout=1)        0.000   contador_cmp_eq00001_wg_cy<3>
+    SLICE_X5Y25.COUT     Tbyp                  0.130   contador_cmp_eq00001_wg_cy<5>
+                                                       contador_cmp_eq00001_wg_cy<4>
+                                                       contador_cmp_eq00001_wg_cy<5>
+    SLICE_X5Y26.CIN      net (fanout=1)        0.000   contador_cmp_eq00001_wg_cy<5>
+    SLICE_X5Y26.XB       Tcinxb                0.216   contador_cmp_eq00001_wg_cy<6>
+                                                       contador_cmp_eq00001_wg_cy<6>
+    SLICE_X6Y16.G1       net (fanout=44)       1.730   contador_cmp_eq00001_wg_cy<6>
+    SLICE_X6Y16.CLK      Tgck                  0.671   contador<1>
+                                                       Mcount_contador_eqn_01
+                                                       contador_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.415ns (2.769ns logic, 2.646ns route)
+                                                       (51.1% logic, 48.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.859ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               contador_26 (FF)
+  Destination:          contador_0 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.395ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.079ns (0.007 - 0.086)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: contador_26 to contador_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y28.YQ       Tcko                  0.596   contador<27>
+                                                       contador_26
+    SLICE_X5Y24.G2       net (fanout=2)        1.043   contador<26>
+    SLICE_X5Y24.COUT     Topcyg                1.009   contador_cmp_eq00001_wg_cy<3>
+                                                       contador_cmp_eq00001_wg_lut<3>
+                                                       contador_cmp_eq00001_wg_cy<3>
+    SLICE_X5Y25.CIN      net (fanout=1)        0.000   contador_cmp_eq00001_wg_cy<3>
+    SLICE_X5Y25.COUT     Tbyp                  0.130   contador_cmp_eq00001_wg_cy<5>
+                                                       contador_cmp_eq00001_wg_cy<4>
+                                                       contador_cmp_eq00001_wg_cy<5>
+    SLICE_X5Y26.CIN      net (fanout=1)        0.000   contador_cmp_eq00001_wg_cy<5>
+    SLICE_X5Y26.XB       Tcinxb                0.216   contador_cmp_eq00001_wg_cy<6>
+                                                       contador_cmp_eq00001_wg_cy<6>
+    SLICE_X6Y16.G1       net (fanout=44)       1.730   contador_cmp_eq00001_wg_cy<6>
+    SLICE_X6Y16.CLK      Tgck                  0.671   contador<1>
+                                                       Mcount_contador_eqn_01
+                                                       contador_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.395ns (2.622ns logic, 2.773ns route)
+                                                       (48.6% logic, 51.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.948ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               contador_25 (FF)
+  Destination:          contador_0 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.306ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.079ns (0.007 - 0.086)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: contador_25 to contador_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y29.XQ       Tcko                  0.521   contador<25>
+                                                       contador_25
+    SLICE_X5Y23.G1       net (fanout=2)        0.899   contador<25>
+    SLICE_X5Y23.COUT     Topcyg                1.009   contador_cmp_eq00001_wg_cy<1>
+                                                       contador_cmp_eq00001_wg_lut<1>
+                                                       contador_cmp_eq00001_wg_cy<1>
+    SLICE_X5Y24.CIN      net (fanout=1)        0.000   contador_cmp_eq00001_wg_cy<1>
+    SLICE_X5Y24.COUT     Tbyp                  0.130   contador_cmp_eq00001_wg_cy<3>
+                                                       contador_cmp_eq00001_wg_cy<2>
+                                                       contador_cmp_eq00001_wg_cy<3>
+    SLICE_X5Y25.CIN      net (fanout=1)        0.000   contador_cmp_eq00001_wg_cy<3>
+    SLICE_X5Y25.COUT     Tbyp                  0.130   contador_cmp_eq00001_wg_cy<5>
+                                                       contador_cmp_eq00001_wg_cy<4>
+                                                       contador_cmp_eq00001_wg_cy<5>
+    SLICE_X5Y26.CIN      net (fanout=1)        0.000   contador_cmp_eq00001_wg_cy<5>
+    SLICE_X5Y26.XB       Tcinxb                0.216   contador_cmp_eq00001_wg_cy<6>
+                                                       contador_cmp_eq00001_wg_cy<6>
+    SLICE_X6Y16.G1       net (fanout=44)       1.730   contador_cmp_eq00001_wg_cy<6>
+    SLICE_X6Y16.CLK      Tgck                  0.671   contador<1>
+                                                       Mcount_contador_eqn_01
+                                                       contador_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.306ns (2.677ns logic, 2.629ns route)
+                                                       (50.5% logic, 49.5% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point contador_3 (SLICE_X6Y17.F3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.338ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               contador_4 (FF)
+  Destination:          contador_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.328ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.010ns (0.009 - 0.019)
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: contador_4 to contador_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y18.YQ       Tcko                  0.477   contador<5>
+                                                       contador_4
+    SLICE_X6Y17.F3       net (fanout=47)       0.413   contador<4>
+    SLICE_X6Y17.CLK      Tckf        (-Th)    -0.438   contador<3>
+                                                       Mcount_contador_eqn_31
+                                                       contador_3
+    -------------------------------------------------  ---------------------------
+    Total                                      1.328ns (0.915ns logic, 0.413ns route)
+                                                       (68.9% logic, 31.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point contador_1 (SLICE_X6Y16.F1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.417ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               contador_4 (FF)
+  Destination:          contador_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.407ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.010ns (0.009 - 0.019)
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: contador_4 to contador_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y18.YQ       Tcko                  0.477   contador<5>
+                                                       contador_4
+    SLICE_X6Y16.F1       net (fanout=47)       0.492   contador<4>
+    SLICE_X6Y16.CLK      Tckf        (-Th)    -0.438   contador<1>
+                                                       Mcount_contador_eqn_11
+                                                       contador_1
+    -------------------------------------------------  ---------------------------
+    Total                                      1.407ns (0.915ns logic, 0.492ns route)
+                                                       (65.0% logic, 35.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point contador_0 (SLICE_X6Y16.G2), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.421ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               contador_4 (FF)
+  Destination:          contador_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.411ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.010ns (0.009 - 0.019)
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: contador_4 to contador_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y18.YQ       Tcko                  0.477   contador<5>
+                                                       contador_4
+    SLICE_X6Y16.G2       net (fanout=47)       0.484   contador<4>
+    SLICE_X6Y16.CLK      Tckg        (-Th)    -0.450   contador<1>
+                                                       Mcount_contador_eqn_01
+                                                       contador_0
+    -------------------------------------------------  ---------------------------
+    Total                                      1.411ns (0.927ns logic, 0.484ns route)
+                                                       (65.7% logic, 34.3% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 0.664ns (Tcl)
+  Physical resource: contador<10>/CLK
+  Logical resource: contador_10/CK
+  Location pin: SLICE_X6Y20.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 83.333ns
+  High pulse: 41.666ns
+  High pulse limit: 0.664ns (Tch)
+  Physical resource: contador<10>/CLK
+  Logical resource: contador_10/CK
+  Location pin: SLICE_X6Y20.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 0.664ns (Tcl)
+  Physical resource: contador<30>/CLK
+  Logical resource: contador_30/CK
+  Location pin: SLICE_X4Y24.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.667|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 1457 paths, 0 nets, and 220 connections
+
+Design statistics:
+   Minimum period:   5.667ns{1}   (Maximum frequency: 176.460MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Sep 10 09:50:07 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4522 MB
+
+
+
